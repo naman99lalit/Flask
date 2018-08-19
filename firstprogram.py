@@ -1,8 +1,11 @@
 from flask import Flask
 app=Flask(__name__)
 
+@app.route("/hello/<int:name>")
+def hello(name):
+    return "Hello Naman %d" % name
 @app.route("/")
-def hello():
-    return "Hello Naman!"
+def index():
+    return "Index Page!"
 if __name__=="__main__":
     app.run()
