@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <h1>Hello Everyone!</h1>
+      {% for item in name %}
+       <ul>
+       	<li>
+       		<a href="{{ url_for('hello', item=item) }}">{{item}}</a>
+       	</li>
+       </ul>
+      {% endfor %}
+   </body>
+</html>
